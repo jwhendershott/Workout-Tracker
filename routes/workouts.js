@@ -22,4 +22,27 @@ router.post('/', async (req, res) => {
 	}
 });
 
+router.put('/:id', async (req, res) => {
+	try {
+		const exercise = req.body;
+		const result = await db.Workout.findByIdAndUpdate(
+			req.params.id,
+			{ $push: { exercises: exercise } },
+			{ new: true }
+		);
+		res.json(result);
+	} catch (err) {
+		res.status(500).send(err);
+	}
+});
+
+router.get('/range', async (req, res) => {
+	try {
+		const workouts = await db.Workout.find({});
+		res.json(workouts);
+	} catch (err) {
+		res.status(500).send(err);
+	}
+});
+
 module.exports = router;
