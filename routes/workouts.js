@@ -6,9 +6,7 @@ router.get('/', async (req, res) => {
 	try {
 		const workouts = await db.Workout.find({});
 		res.json(workouts);
-	} catch (err) {
-		res.status(500).send(err);
-	}
+	} catch (err) { res.status(400).send(err);}
 });
 
 router.post('/', async (req, res) => {
@@ -17,9 +15,7 @@ router.post('/', async (req, res) => {
 		workout.day = Date.now();
 		const result = await db.Workout.create(workout);
 		res.json(result);
-	} catch (err) {
-		res.status(500).send(err);
-	}
+	} catch (err) {	res.status(400).send(err);}
 });
 
 router.put('/:id', async (req, res) => {
@@ -31,18 +27,14 @@ router.put('/:id', async (req, res) => {
 			{ new: true }
 		);
 		res.json(result);
-	} catch (err) {
-		res.status(500).send(err);
-	}
+	} catch (err) {	res.status(400).send(err);}
 });
 
 router.get('/range', async (req, res) => {
 	try {
 		const workouts = await db.Workout.find({});
 		res.json(workouts);
-	} catch (err) {
-		res.status(500).send(err);
-	}
+	} catch (err) {	res.status(400).send(err);}
 });
 
 module.exports = router;

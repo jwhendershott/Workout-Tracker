@@ -11,7 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-app.use(require('./routes/index'));
+let routes = require('./routes/index');
+app.use('/api', routes);
 app.use(require('./routes/htmlRoutes'));
 
 mongoose.connect(
