@@ -20,6 +20,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date().setDate(new Date().getDate()-9),
     exercises: [
@@ -33,6 +34,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date().setDate(new Date().getDate()-8),
     exercises: [
@@ -46,6 +48,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date().setDate(new Date().getDate()-7),
     exercises: [
@@ -57,6 +60,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date().setDate(new Date().getDate()-6),
     exercises: [
@@ -70,6 +74,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date().setDate(new Date().getDate()-5),
     exercises: [
@@ -83,6 +88,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date(new Date().setDate(new Date().getDate() - 4)),
     exercises: [
@@ -96,6 +102,7 @@ let workoutSeed = [
       }
     ]
   },
+
   {
     day: new Date(new Date().setDate(new Date().getDate() - 3)),
     exercises: [
@@ -109,6 +116,7 @@ let workoutSeed = [
       }
     ]
   },
+  
   {
     day: new Date(new Date().setDate(new Date().getDate() - 2)),
     exercises: [
